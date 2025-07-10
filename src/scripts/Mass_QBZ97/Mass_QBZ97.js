@@ -4,7 +4,7 @@ const Mass_ModClass_1 = require("../../Mass_ModClass");
 const assortConfig = require("../../../config/Mass_QBZ97/assortConfig.json");
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const handbookCategory_1 = require("../../enum/handbookCategory");
 const IDDL = {
     WEAPON_QBZ97: "020020BBA97BBA9700000000",
@@ -390,7 +390,7 @@ class Mass_QBZ97 extends Mass_ModClass_1.Mass_ModClass {
                     }
                 },
                 addtoTraders: true,
-                
+
                 traderId: NTrader_1.NTrader.Default,
                 "barterScheme": [
                     {
@@ -483,7 +483,7 @@ class Mass_QBZ97 extends Mass_ModClass_1.Mass_ModClass {
             }
         }
         const WEAPON_QBZ97Config = assortConfig.weapon_qbz97;
-        MMA.traderGenerateAssortFromPreset("220020BBA97BBA9700000000", WEAPON_QBZ97Config.price, NTrader_1.NTrader.Default, WEAPON_QBZ97Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020BBA97BBA9700000000", WEAPON_QBZ97Config.price, NTrader_1.NTrader.Default, WEAPON_QBZ97Config.loyaltyLevel, Money.ROUBLES);
         ModifyInfos[IDDL.WEAPON_QBZ97] = {
             ItemId: IDDL.WEAPON_QBZ97,
             WeaponCaliberCloneFromId: "itself"

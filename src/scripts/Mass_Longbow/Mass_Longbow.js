@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Mass_ModClass_1 = require("../../Mass_ModClass");
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const assortConfig = require("../../../config/Mass_Longbow/assortConfig.json");
 const handbookCategory_1 = require("../../enum/handbookCategory");
 const IDDL = {
@@ -1365,7 +1365,7 @@ class Mass_Longbow extends Mass_ModClass_1.Mass_ModClass {
             }
         }
         const Config = assortConfig.preset;
-        MMA.traderGenerateAssortFromPreset("22002010AB10AB0000000000", Config.price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("22002010AB10AB0000000000", Config.price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         ModifyInfos[IDDL.WEAPON_LONGBOW] = {
             ItemId: IDDL.WEAPON_LONGBOW,
             WeaponCaliberCloneFromId: "itself"

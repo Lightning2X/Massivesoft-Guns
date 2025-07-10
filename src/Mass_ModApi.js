@@ -7,9 +7,9 @@ exports.Mass_ModApi = void 0;
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const Mass_ModClass_1 = require("./Mass_ModClass");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
-const BaseClasses_1 = require("C:/snapshot/project/obj/models/enums/BaseClasses");
-const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
+const Money = require("./enum/aki/Money");
+const ConfigTypes = require("./enum/aki/ConfigTypes");
+const BaseClasses = require("./enum/aki/BaseClasses");
 class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
     ThisModPathNodes;
     newItemList;
@@ -355,7 +355,7 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
      * Generate assort from weapon preset
      * @returns assrotId
      */
-    traderAddItems(Id, Price, trader, loyal, currency = Money_1.Money.ROUBLES, postfix = "3") {
+    traderAddItems(Id, Price, trader, loyal, currency = Money.ROUBLES, postfix = "3") {
         const pflegth = postfix.length;
         const assortId = postfix + Id.slice(pflegth);
         this.DBtraders[trader].assort.items.push({
@@ -373,9 +373,9 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
         }
         this.DBtraders[trader].assort.barter_scheme[assortId] = [
             [{
-                    "count": Price,
-                    "_tpl": currency
-                }]
+                "count": Price,
+                "_tpl": currency
+            }]
         ];
         this.DBtraders[trader].assort.loyal_level_items[assortId] = loyal;
         return assortId;
@@ -598,7 +598,7 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
         else
             caliberWWTable = caliberTable;
         for (let y in this.DBitems) {
-            if (this.DBitems[y]._parent == BaseClasses_1.BaseClasses.AMMO) {
+            if (this.DBitems[y]._parent == BaseClasses.AMMO) {
                 for (let z in caliberWWTable) {
                     if (this.DBitems[y]._props.Caliber == caliberWWTable[z]) {
                         this.magazineAddAmmo(magId, y);
@@ -636,7 +636,7 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
         else
             caliberWWTable = this.weaponGetCaliber(cloneId);
         for (let x in this.DBitems) {
-            if (this.DBitems[x]._parent == BaseClasses_1.BaseClasses.AMMO) {
+            if (this.DBitems[x]._parent == BaseClasses.AMMO) {
                 for (let z in caliberWWTable) {
                     if (this.DBitems[x]._props.Caliber == caliberWWTable[z]) {
                         this.weaponAddAmmo(weaponId, x);
@@ -824,9 +824,9 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
         }
         this.DBtraders[trader].assort.barter_scheme[assortId] = [
             [{
-                    "count": Price,
-                    "_tpl": (currency == undefined ? Money_1.Money.ROUBLES : currency)
-                }]
+                "count": Price,
+                "_tpl": (currency == undefined ? Money.ROUBLES : currency)
+            }]
         ];
         this.DBtraders[trader].assort.loyal_level_items[assortId] = (loyal == undefined ? 1 : loyal);
         return assortId;
@@ -925,9 +925,9 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
             "_parent": parentId,
             "_props": {
                 "filters": [{
-                        "Shift": 0,
-                        "Filter": Filter
-                    }]
+                    "Shift": 0,
+                    "Filter": Filter
+                }]
             },
             "_required": (required == undefined ? false : required),
             "_mergeSlotWithChildren": (mergeSlotWithChildren == undefined ? false : required),
@@ -976,7 +976,7 @@ class Mass_ModApi extends Mass_ModClass_1.Mass_ModClass {
     itemPMCLootBlackList(id) {
         const ConfigServer = this.container.resolve("ConfigServer");
         // const BotConfig = ConfigServer.configs['aki-bot'];
-        const BotConfig = ConfigServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
+        const BotConfig = ConfigServer.getConfig(ConfigTypes.PMC);
         BotConfig.vestLoot.blacklist.push(id);
         BotConfig.backpackLoot.blacklist.push(id);
         BotConfig.pocketLoot.blacklist.push(id);

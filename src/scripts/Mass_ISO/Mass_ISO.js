@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Mass_ModClass_1 = require("../../Mass_ModClass");
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const assortConfig = require("../../../config/Mass_ISO/assortConfig.json");
 const handbookCategory_1 = require("../../enum/handbookCategory");
 const IDDL = {
@@ -1604,23 +1604,23 @@ class Mass_ISO extends Mass_ModClass_1.Mass_ModClass {
                         "rcid": ""
                     },
                     Slots: [{
-                            "_name": mod_slot_1.mod_slot.muzzle,
-                            "_id": "5c488af32e2216398b5a9608",
-                            "_parent": "5c488a752e221602b412af63",
-                            "_props": {
-                                "filters": [
-                                    {
-                                        "Shift": 0,
-                                        "Filter": [
-                                            IDDL.SILENCER_ISO
-                                        ]
-                                    }
-                                ]
-                            },
-                            "_required": true,
-                            "_mergeSlotWithChildren": false,
-                            "_proto": "55d30c4c4bdc2db4468b457e"
-                        }],
+                        "_name": mod_slot_1.mod_slot.muzzle,
+                        "_id": "5c488af32e2216398b5a9608",
+                        "_parent": "5c488a752e221602b412af63",
+                        "_props": {
+                            "filters": [
+                                {
+                                    "Shift": 0,
+                                    "Filter": [
+                                        IDDL.SILENCER_ISO
+                                    ]
+                                }
+                            ]
+                        },
+                        "_required": true,
+                        "_mergeSlotWithChildren": false,
+                        "_proto": "55d30c4c4bdc2db4468b457e"
+                    }],
                     Weight: 0.06,
                     ExtraSizeLeft: 0,
                     Width: 1,
@@ -1668,23 +1668,23 @@ class Mass_ISO extends Mass_ModClass_1.Mass_ModClass {
                         "rcid": ""
                     },
                     Slots: [{
-                            "_name": mod_slot_1.mod_slot.muzzle,
-                            "_id": "5c488af32e2216398b5a9608",
-                            "_parent": "5c488a752e221602b412af63",
-                            "_props": {
-                                "filters": [
-                                    {
-                                        "Shift": 0,
-                                        "Filter": [
-                                            IDDL.SILENCER_S45
-                                        ]
-                                    }
-                                ]
-                            },
-                            "_required": true,
-                            "_mergeSlotWithChildren": false,
-                            "_proto": "55d30c4c4bdc2db4468b457e"
-                        }],
+                        "_name": mod_slot_1.mod_slot.muzzle,
+                        "_id": "5c488af32e2216398b5a9608",
+                        "_parent": "5c488a752e221602b412af63",
+                        "_props": {
+                            "filters": [
+                                {
+                                    "Shift": 0,
+                                    "Filter": [
+                                        IDDL.SILENCER_S45
+                                    ]
+                                }
+                            ]
+                        },
+                        "_required": true,
+                        "_mergeSlotWithChildren": false,
+                        "_proto": "55d30c4c4bdc2db4468b457e"
+                    }],
                     Weight: 0.06,
                     ExtraSizeLeft: 0,
                     Width: 1,
@@ -3084,11 +3084,11 @@ class Mass_ISO extends Mass_ModClass_1.Mass_ModClass {
             }
         }
 
-        MMA.traderGenerateAssortFromPreset("220020F150F1500000000000", assortConfig.preset1.price, NTrader_1.NTrader.Default, assortConfig.preset1.loyaltyLevel, Money_1.Money.ROUBLES);
-        MMA.traderGenerateAssortFromPreset("220020F151F1510000000000", assortConfig.preset2.price, NTrader_1.NTrader.Default, assortConfig.preset2.loyaltyLevel, Money_1.Money.ROUBLES);
-        MMA.traderGenerateAssortFromPreset("220020F152F1520000000000", assortConfig.preset3.price, NTrader_1.NTrader.Default, assortConfig.preset3.loyaltyLevel, Money_1.Money.ROUBLES);
-        MMA.traderGenerateAssortFromPreset("220020F153F1530000000000", assortConfig.preset4.price, NTrader_1.NTrader.Default, assortConfig.preset4.loyaltyLevel, Money_1.Money.ROUBLES);
-        MMA.traderGenerateAssortFromPreset("220020F154F1540000000000", assortConfig.preset5.price, NTrader_1.NTrader.Default, assortConfig.preset5.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020F150F1500000000000", assortConfig.preset1.price, NTrader_1.NTrader.Default, assortConfig.preset1.loyaltyLevel, Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020F151F1510000000000", assortConfig.preset2.price, NTrader_1.NTrader.Default, assortConfig.preset2.loyaltyLevel, Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020F152F1520000000000", assortConfig.preset3.price, NTrader_1.NTrader.Default, assortConfig.preset3.loyaltyLevel, Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020F153F1530000000000", assortConfig.preset4.price, NTrader_1.NTrader.Default, assortConfig.preset4.loyaltyLevel, Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020F154F1540000000000", assortConfig.preset5.price, NTrader_1.NTrader.Default, assortConfig.preset5.loyaltyLevel, Money.ROUBLES);
         ModifyInfos[IDDL.WEAPON_ISO_GEN1] = {
             ItemId: IDDL.WEAPON_ISO_GEN1,
             WeaponCaliberCloneFromId: "itself"

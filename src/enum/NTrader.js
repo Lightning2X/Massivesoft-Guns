@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.currencyMulti = exports.NTrader = void 0;
-const Traders_1 = require("C:/snapshot/project/obj/models/enums/Traders");
+const Traders = require("./aki/Traders");
 var NTrader;
 (function (NTrader) {
     NTrader["Skin"] = "tradernewskinvendor";
-    NTrader["Default"] = Traders_1.Traders.MECHANIC;
+    NTrader["Default"] = Traders.MECHANIC;
 })(NTrader = exports.NTrader || (exports.NTrader = {}));
 var currencyMulti;
 (function (currencyMulti) {

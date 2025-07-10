@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Mass_ModClass_1 = require("../../Mass_ModClass");
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const assortConfig = require("../../../config/Mass_JAK12/assortConfig.json");
 const cpntName = "Mass_JAK12";
 const IDList = {
@@ -301,7 +301,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.barrel;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/barrel_jak12_12g.bundle";
         //Localization
         var locs = {
@@ -331,7 +331,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.muzzle;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/muzzle_jak12_12g";
         item._props.Weight = 0.02;
         var locs = {
@@ -361,7 +361,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.handguard;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/handguard_jak12.bundle";
         var fore_grip = this.MMA.newSlot(mod_slot_1.mod_slot.foregrip, "A0B", id, false);
         fore_grip._props.filters[0].Filter = this.JsonUtil.clone(this.MMA.itemGetSlotbyName(mod_slot_1.mod_slot.foregrip, IDList.MOUNT_MLOK_41)._props.filters[0].Filter);
@@ -442,7 +442,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.rail_side;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/mount_jak12_side.bundle";
         var locs = {
             "ch": {
@@ -471,7 +471,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.stock;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/stock_jak12.bundle";
         item._props.IsShoulderContact = true;
         item._props.HasShoulderContact = true;
@@ -502,7 +502,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.magazine;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/magazine_jak12_12ga_10.bundle";
         item._props.Cartridges[0]._max_count = 8;
         var locs = {
@@ -538,7 +538,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.drum20;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/magazine_jak12_12ga_20.bundle";
         item._props.Cartridges[0]._max_count = 20;
         var locs = {
@@ -576,7 +576,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.drum32;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/magazine_jak12_12ga_32.bundle";
         item._props.Cartridges[0]._max_count = 32;
         var locs = {
@@ -616,7 +616,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.sight_front;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/sight_front_jak12.bundle";
         item._props.Weight = 0.03;
         item._props.SightingRange = 100;
@@ -648,7 +648,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.sight_rear;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/sight_rear_jak12.bundle";
         item._props.Weight = 0.03;
         var locs = {
@@ -733,7 +733,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         };
         this.DBpresets[id] = preset;
         const Config = assortConfig.preset;
-        this.MMA.traderGenerateAssortFromPreset(id, Config.price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.EUROS);
+        this.MMA.traderGenerateAssortFromPreset(id, Config.price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.EUROS);
     }
     parts_short() {
         this.short_rail_side();
@@ -747,7 +747,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.short_rail_side;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/mount_jak12_side_2.bundle";
         var locs = {
             "ch": {
@@ -794,7 +794,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         const Config = assortConfig.short_barrel;
         const Price = Config.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, Config.loyaltyLevel, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/barrel_jak12_short_12g.bundle";
         //Localization
         var locs = {
@@ -826,7 +826,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         ];
         const Price = 4000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/handguard_jak12_short.bundle";
         var fore_grip = this.MMA.newSlot(mod_slot_1.mod_slot.foregrip, "A0B", id, false);
         fore_grip._props.filters[0].Filter = this.JsonUtil.clone(this.MMA.itemGetSlotbyName(mod_slot_1.mod_slot.foregrip, IDList.MOUNT_MLOK_41)._props.filters[0].Filter);
@@ -881,7 +881,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         let item = this.MMA.cloneItem(clone_id, id);
         const Price = 2000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/mount_jak12_side_3.bundle";
         var locs = {
             "ch": {
@@ -938,7 +938,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         ];
         const Price = 3000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/barrel_jak12_heavy_12g.bundle";
         //Localization
         var locs = {
@@ -971,7 +971,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         ];
         const Price = 4000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/handguard_jak12_heavy.bundle";
         var fore_grip = this.MMA.newSlot(mod_slot_1.mod_slot.foregrip, "A0B", id, false);
         fore_grip._props.filters[0].Filter = this.JsonUtil.clone(this.MMA.itemGetSlotbyName(mod_slot_1.mod_slot.foregrip, IDList.MOUNT_MLOK_41)._props.filters[0].Filter);
@@ -1031,7 +1031,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         item._props = this.setItemProps(item._props, npps);
         const Price = 3000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/muzzle_jak12_heavy_12g.bundle";
         item._props.Weight = 0.02;
         var locs = {
@@ -1097,7 +1097,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         ];
         const Price = 3000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/barrel_jak12_long_12g.bundle";
         //Localization
         var locs = {
@@ -1131,7 +1131,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         ];
         const Price = 4000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Prefab.path = "assets/jak12/mods/handguard_jak12_long.bundle";
         var fore_grip = this.MMA.newSlot(mod_slot_1.mod_slot.foregrip, "A0B", id, false);
         fore_grip._props.filters[0].Filter = this.JsonUtil.clone(this.MMA.itemGetSlotbyName(mod_slot_1.mod_slot.foregrip, IDList.MOUNT_MLOK_41)._props.filters[0].Filter);
@@ -1181,7 +1181,7 @@ class Mass_JAK12 extends Mass_ModClass_1.Mass_ModClass {
         let item = this.MMA.cloneItem(clone_id, id);
         const Price = 3000;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, 1, Money.ROUBLES);
         item._props.Slots = [];
         var muzzle = this.MMA.newSlot(mod_slot_1.mod_slot.muzzle, "A01", id, false);
         muzzle._props.filters[0].Filter = this.MMA.itemGetSlotbyName(mod_slot_1.mod_slot.muzzle, IDList.bar_mp155)._props.filters[0].Filter;

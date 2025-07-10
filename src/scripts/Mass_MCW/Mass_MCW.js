@@ -4,7 +4,7 @@ const Mass_ModClass_1 = require("../../Mass_ModClass");
 const assortConfig = require("../../../config/Mass_MCW/assortConfig.json")
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const handbookCategory_1 = require("../../enum/handbookCategory");
 const IDDL = {
     WEAPON_MCW_FDE: "020020AACBBFDE0000000000",
@@ -4629,15 +4629,15 @@ class Mass_MCW extends Mass_ModClass_1.Mass_ModClass {
             }
         }
         const FDEConfig = assortConfig.fde;
-        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_FDE}000`, FDEConfig.price, NTrader_1.NTrader.Default, FDEConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_FDE}000`, FDEConfig.price, NTrader_1.NTrader.Default, FDEConfig.loyaltyLevel, Money.ROUBLES);
         const BLKConfig = assortConfig.blk;
-        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_BLK}000`, BLKConfig.price, NTrader_1.NTrader.Default, BLKConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_BLK}000`, BLKConfig.price, NTrader_1.NTrader.Default, BLKConfig.loyaltyLevel, Money.ROUBLES);
         const P300Config = assortConfig.p300;
-        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_300}000`, P300Config.price, NTrader_1.NTrader.Default, P300Config.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_300}000`, P300Config.price, NTrader_1.NTrader.Default, P300Config.loyaltyLevel, Money.ROUBLES);
         const AIMConfig = assortConfig.aim;
-        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_AIM}000`, AIMConfig.price, NTrader_1.NTrader.Default, AIMConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_AIM}000`, AIMConfig.price, NTrader_1.NTrader.Default, AIMConfig.loyaltyLevel, Money.ROUBLES);
         const SNPConfig = assortConfig.snp;
-        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_SNP}000`, SNPConfig.price, NTrader_1.NTrader.Default, SNPConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset(`${IDDL.PRESET_SNP}000`, SNPConfig.price, NTrader_1.NTrader.Default, SNPConfig.loyaltyLevel, Money.ROUBLES);
         const weaponList = [
             IDDL.WEAPON_MCW_FDE,
             IDDL.WEAPON_MCW_BLK,

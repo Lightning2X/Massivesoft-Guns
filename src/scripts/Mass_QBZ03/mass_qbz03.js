@@ -4,7 +4,7 @@ const Mass_ModClass_1 = require("../../Mass_ModClass");
 const assortConfig = require("../../../config/Mass_QBZ03/assortConfig.json");
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const cpntName = "Mass_QBZ03";
 const IDList = {
     WEAPON_QBZ03: "020020BBA03BBA0300000000",
@@ -226,7 +226,7 @@ class Mass_QBZ03 extends Mass_ModClass_1.Mass_ModClass {
         const handguard_railConfig = assortConfig.handguard_rail;
         const Price = handguard_railConfig.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, handguard_railConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, handguard_railConfig.loyaltyLevel, Money.ROUBLES);
         handguard_rail._props.Prefab.path = "assets/qbz03/handguard/handguard_qbz03_rail.bundle";
         //	Logger.log(l85a2._props.Slots);
         this.DBitems[id] = handguard_rail;
@@ -348,7 +348,7 @@ class Mass_QBZ03 extends Mass_ModClass_1.Mass_ModClass {
         var hb = this.MMA.cloneHandbookById(IDList.MOUNT_TULA);
         hb.Id = id;
         this.DBhbItems.push(hb);
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, mountConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, mountConfig.loyaltyLevel, Money.ROUBLES);
     }
     muzzle() {
         let muzzle = this.JsonUtil.clone(this.DBitems[IDList.MUZZLE_AR15]);
@@ -384,7 +384,7 @@ class Mass_QBZ03 extends Mass_ModClass_1.Mass_ModClass {
         var hb = this.MMA.cloneHandbookById(IDList.STOCK_TUBE_SVD);
         hb.Id = id;
         this.DBhbItems.push(hb);
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, stock_tubeConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, stock_tubeConfig.loyaltyLevel, Money.ROUBLES);
     }
     magazine() {
         let mag = this.JsonUtil.clone(this.DBitems[IDList.MAGAZINE_416]);
@@ -592,7 +592,7 @@ class Mass_QBZ03 extends Mass_ModClass_1.Mass_ModClass {
         const handguard_sekConfig = assortConfig.handguard_sek;
         const Price = handguard_sekConfig.price;
         this.DBprice[id] = Price;
-        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, handguard_sekConfig.loyaltyLevel, Money_1.Money.ROUBLES);
+        this.MMA.traderAddItems(id, Price, NTrader_1.NTrader.Default, handguard_sekConfig.loyaltyLevel, Money.ROUBLES);
         handguard_sek._props.Prefab.path = "assets/qbz03_sek/handguard_qbz03_sek_hmmlok01.bundle";
         this.DBitems[id] = handguard_sek;
         this.MMA.registerNewItem(id);

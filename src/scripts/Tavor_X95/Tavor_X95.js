@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Mass_ModClass_1 = require("../../Mass_ModClass");
 const NTrader_1 = require("../../enum/NTrader");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const handbookCategory_1 = require("../../enum/handbookCategory");
 const assortConfig = require("../../../config/Tavor_X95/assortConfig.json");
 const cpntName = "Tavor_X95";
@@ -1209,7 +1209,7 @@ class Tavor_X95 extends Mass_ModClass_1.Mass_ModClass {
             x95RConfig.price,
             NTrader_1.NTrader.Default,
             x95RConfig.loyaltyLevel,
-            Money_1.Money.ROUBLES
+            Money.ROUBLES
         );
 
         const x95Config = assortConfig.x95;
@@ -1218,7 +1218,7 @@ class Tavor_X95 extends Mass_ModClass_1.Mass_ModClass {
             x95Config.price,
             NTrader_1.NTrader.Default,
             x95Config.loyaltyLevel,
-            Money_1.Money.ROUBLES
+            Money.ROUBLES
         );
     }
 }

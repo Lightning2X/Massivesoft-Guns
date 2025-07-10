@@ -1,7 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AdvancedNewItemFromCloneDetails = exports.StaticLootContainer = exports.copySlotInfo = exports.masterySection = void 0;
-const NewItemDetails_1 = require("C:/snapshot/project/obj/models/spt/mod/NewItemDetails");
+const {
+    NewItemDetailsBase,
+} = require("types/aki/NewItemDetails.js");
+
 class masterySection {
     Name;
     Templates;
@@ -20,7 +23,7 @@ class StaticLootContainer {
     Probability;
 }
 exports.StaticLootContainer = StaticLootContainer;
-class AdvancedNewItemFromCloneDetails extends NewItemDetails_1.NewItemDetailsBase {
+class AdvancedNewItemFromCloneDetails extends NewItemDetailsBase {
     itemTplToClone;
     overrideProperties;
     parentId;

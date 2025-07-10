@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Mass_ModClass_1 = require("../../Mass_ModClass");
 const NTrader_1 = require("../../enum/NTrader");
 const mod_slot_1 = require("../../enum/mod_slot");
-const Money_1 = require("C:/snapshot/project/obj/models/enums/Money");
+const Money = require("../../enum/aki/Money");
 const assortConfig = require("../../../config/Mass_DG56/assortConfig.json");
 const handbookCategory_1 = require("../../enum/handbookCategory");
 const IDDL = {
@@ -1731,8 +1731,8 @@ class Mass_DG56 extends Mass_ModClass_1.Mass_ModClass {
                 MMA.modifyItems(MODINFO);
             }
         }
-        MMA.traderGenerateAssortFromPreset("220020DF056DF05600000000", assortConfig.preset1.price, NTrader_1.NTrader.Default, assortConfig.preset1.loyaltyLevel, Money_1.Money.ROUBLES);
-        MMA.traderGenerateAssortFromPreset("220020DF156DF15600000000", assortConfig.preset2.price, NTrader_1.NTrader.Default, assortConfig.preset2.loyaltyLevel, Money_1.Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020DF056DF05600000000", assortConfig.preset1.price, NTrader_1.NTrader.Default, assortConfig.preset1.loyaltyLevel, Money.ROUBLES);
+        MMA.traderGenerateAssortFromPreset("220020DF156DF15600000000", assortConfig.preset2.price, NTrader_1.NTrader.Default, assortConfig.preset2.loyaltyLevel, Money.ROUBLES);
         ModifyInfos[IDDL.WEAPON_DG56] = {
             ItemId: IDDL.WEAPON_DG56,
             WeaponCaliberCloneFromId: "itself"
